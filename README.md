@@ -21,7 +21,12 @@ rm /tmp/erl.deb
 
 ### PureScript
 
-We need purescript compiler, which is the parent to `purerl`. Currently supported compiler is v0.13.8.
+We need purescript compiler, which is the parent to `purerl`. Since we
+piggy-back id3as framework for making PureScript applications, we use
+the compiler, which is currently supported by their packages.
+
+At the time of this commit, the compiler is v0.14.3. Corresponding
+purerl compiler can be seen in [this table](https://github.com/purerl/purerl#versions).
 
 ```
 wget https://github.com/purescript/purescript/releases/download/v0.14.3/linux64.tar.gz
@@ -42,8 +47,12 @@ rm Linux.tar.gz
 
 ### Purerl
 
+To determine the version, see "PureScript" section of this README.
+
+At the time of writing we use purs v0.14.3 and purerl v0.0.11.
+
 ```
-wget https://github.com/purerl/purerl/releases/download/v0.0.12/linux64.tar.gz
+wget https://github.com/purerl/purerl/releases/download/v0.0.11/linux64.tar.gz
 tar xzvf linux64.tar.gz
 cp purerl/purerl ~/.local/bin/
 purerl --version
